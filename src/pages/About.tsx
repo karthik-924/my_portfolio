@@ -8,6 +8,8 @@ import { SectionWrapper } from "../hoc";
 import Experience from './Experience'
 import Tech from './Tech'
 import Works from './Works'
+import Contact from './Contact'
+import StarCanvas from '../components/canvas/Stars'
 // import { staggerContainer } from '../utils/motion'
 
 type Props = {}
@@ -75,7 +77,15 @@ const About = (props: Props) => {
         </div>
       </motion.section>
       <Experience />
-      <Works />
+      <div className='relative z-0'>
+        <Works />
+        <StarCanvas />
+      </div>
+      <div className='relative z-0'>
+        <Contact />
+        <StarCanvas />
+      </div>
+
     </div>
   )
 }
