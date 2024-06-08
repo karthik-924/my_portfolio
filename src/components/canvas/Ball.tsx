@@ -1,7 +1,7 @@
-import React, { Suspense } from 'react'
+import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import {
-    Decal, Float, OrbitControls, Preload, useTexture
+    Decal, Float, OrbitControls, useTexture
 } from '@react-three/drei'
 import Loader from '../Loader'
 
@@ -28,7 +28,6 @@ const Ball = (props: Props) => {
                     rotation={[2 * Math.PI, 0, 6.25]}
                     scale={1}
                     map={decal}
-                    flatShading
                 />
             </mesh>
         </Float>

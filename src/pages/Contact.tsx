@@ -1,16 +1,19 @@
-import React, { useRef, useState } from "react";
+import { ChangeEvent, FormEvent, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-import { styles } from "../styles";
+import { styles }  from "../styles";
 import EarthCanvas from "../components/canvas/Earth";
-import { slideIn,staggerContainer } from "../utils/motion";
+import { slideIn,staggerContainer } from "../utils/motion"
 
-type Props = {}
 
-const Contact = (props: Props) => {
+const Contact = () => {
   const formRef = useRef(null);
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<{
+    name: string;
+    email: string;
+    message: string;
+  }>({
     name: "",
     email: "",
     message: "",
@@ -18,17 +21,17 @@ const Contact = (props: Props) => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement|HTMLTextAreaElement>) => {
     const { target } = e;
     const { name, value } = target;
-
+  
     setForm({
       ...form,
       [name]: value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
@@ -68,7 +71,7 @@ const Contact = (props: Props) => {
   return (
     <>
       <motion.section
-        variants={staggerContainer()}
+        variants={staggerContainer(0.1, 0.2)}
         initial='hidden'
         whileInView='show'
         viewport={{ once: true, amount: 0.25 }}

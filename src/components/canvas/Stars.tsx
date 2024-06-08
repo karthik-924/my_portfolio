@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, Suspense, useState } from 'react';
+import React, { useRef, Suspense, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial, Preload } from '@react-three/drei';
 import * as random from 'maath/random/dist/maath-random.cjs';
@@ -7,10 +7,10 @@ import * as THREE from 'three';
 const Starss: React.FC = (props) => {
   const ref = useRef<THREE.Points>(null);
 
-  const [sphere] = useState(() => random.inSphere(new Float32Array(8000), { radius: 1.2 }));
+  const [sphere] = useState(() => new Float32Array(random.inSphere(new Float64Array(8000), { radius: 1.2 })));
   // console.log(sphere);
   useFrame((state, delta) => {
-    if (ref.current) {
+    if (state && ref.current) {
       ref.current.rotation.x -= delta / 10;
       ref.current.rotation.y -= delta / 15;
     }

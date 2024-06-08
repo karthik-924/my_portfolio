@@ -1,8 +1,7 @@
-import React from 'react'
 import { Tilt } from 'react-tilt'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
-import { github } from '../assets'
+import github from '../assets/github.png'
 import { projects } from '../constants'
 import { fadeIn, staggerContainer, textVariant } from '../utils/motion'
 
@@ -78,7 +77,7 @@ const Works = () => {
   return (
     <>
       <motion.section
-        variants={staggerContainer()}
+        variants={staggerContainer(0.5, 0.5)}
         initial='hidden'
         whileInView='show'
         viewport={{ once: true, amount: 0.25 }}
@@ -87,7 +86,7 @@ const Works = () => {
         <span className='hash-span' id={"about"}>
           &nbsp;
         </span>
-        <motion.div variants={textVariant()}>
+        <motion.div variants={textVariant(0.5)}>
           <p className={`${styles.sectionSubText} `}>My work</p>
           <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
         </motion.div>

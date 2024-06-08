@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import React, { Suspense, useEffect, useRef, useState } from 'react'
+import { Suspense, useEffect, useRef, useState } from 'react'
 import Loader from '../components/Loader'
 import Island from '../models/Island'
 import Sky from '../models/Sky'
@@ -10,16 +10,15 @@ import sakura from '../assets/sakura.mp3'
 import soundon from '../assets/icons/soundon.png'
 import soundoff from '../assets/icons/soundoff.png'
 
-type Props = {}
 
-const Home = (props: Props) => {
+const Home = () => {
     const audioRef = useRef(new Audio(sakura))
     audioRef.current.loop = true
     audioRef.current.volume = 0.4
 
-    const [isRotating, setIsRotating] = useState(false)
-    const [currentStage, setCurrentStage] = useState(1)
-    const [isPlayingMusic, setIsPlayingMusic] = useState(false)
+    const [isRotating, setIsRotating] = useState<boolean>(false)
+    const [currentStage, setCurrentStage] = useState<number>(1)
+    const [isPlayingMusic, setIsPlayingMusic] = useState<boolean>(false)
 
     useEffect(() => {
         if (isPlayingMusic) {
@@ -30,6 +29,7 @@ const Home = (props: Props) => {
             audioRef.current.pause()
         }
         return () => {
+            // eslint-disable-next-line react-hooks/exhaustive-deps
             audioRef.current.pause()
         }
     }, [isPlayingMusic])
@@ -73,24 +73,24 @@ const Home = (props: Props) => {
                     />
                     <ambientLight intensity={0.5} />
                     <hemisphereLight
-                        skyColor="#b1e1ff" groundColor="#000000" intensity={1}
+                        color="#b1e1ff" groundColor="#000000" intensity={1}
                     />
                     <Bird />
                     <Sky
                         isRotating={isRotating}
                     />
                     <Island
-                        position={islandPosition}
-                        scale={islandScale}
-                        rotation={rotation}
+                        position={islandPosition as [x: number, y: number, z: number]}
+                        scale={islandScale as [x: number, y: number, z: number]}
+                        rotation={rotation as [x: number, y: number, z: number]}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                         currentStage={currentStage}
                         setCurrentStage={setCurrentStage}
                     />
                     <Plane
-                        position={planePosition}
-                        scale={planeScale}
+                        position={planePosition as [x: number, y: number, z: number]}
+                        scale={planeScale as [x: number, y: number, z: number]}
                         isRotating={isRotating}
                         rotation={[0, 20.5, 0]}
                     />

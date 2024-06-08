@@ -1,8 +1,4 @@
-import React from 'react'
-
-type Props = {}
-
-const Name = (props: Props) => {
+const Name = () => {
   return (
     <div className='w-fit h-[4rem] flex flex-col justify-between ml-8'>
       <h1 className='m-0 text-2xl'>KARTHIK EMMADI LEVEL 21</h1>

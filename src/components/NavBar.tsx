@@ -4,15 +4,12 @@ import navIcon1 from '../assets/nav-icon1.svg';
 import navIcon2 from '../assets/nav-icon2.svg';
 import navIcon3 from '../assets/nav-icon3.svg';
 import {
-    Link,
-  NavLink,
-  BrowserRouter as Router
+  NavLink
 } from "react-router-dom";
 import Name from "./Name";
 
-type Props = object;
 
-const NavBar = (props: Props) => {
+const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
   
@@ -30,7 +27,7 @@ const NavBar = (props: Props) => {
       return () => window.removeEventListener("scroll", onScroll);
     }, [])
   
-    const onUpdateActiveLink = (value) => {
+    const onUpdateActiveLink = (value: string) => {
       setActiveLink(value);
     }
   

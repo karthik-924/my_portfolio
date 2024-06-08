@@ -1,4 +1,3 @@
-import React from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -9,11 +8,8 @@ import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
 import { experiences } from "../constants";
-import { SectionWrapper } from "../hoc";
 import { textVariant,staggerContainer } from "../utils/motion";
-import Tech from "./Tech";
 
-type Props = {}
 
 type ExperienceCardProps = {
   experience: {
@@ -70,11 +66,11 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   );
 }
 
-const Experience = (props: Props) => {
+const Experience = () => {
   return (
     <>
       <motion.section
-        variants={staggerContainer()}
+        variants={staggerContainer(0.5, 0.1)}
         initial='hidden'
         whileInView='show'
         viewport={{ once: true, amount: 0.25 }}
@@ -83,7 +79,7 @@ const Experience = (props: Props) => {
         <span className='hash-span' id={"about"}>
           &nbsp;
         </span>
-        <motion.div variants={textVariant()}>
+        <motion.div variants={textVariant(0.5)}>
           <p className={`${styles.sectionSubText} text-center`}>
             What I have done so far
           </p>
@@ -102,7 +98,7 @@ const Experience = (props: Props) => {
             ))}
           </VerticalTimeline>
         </div>
-        <Tech />
+        
       </motion.section>
     </>
   );
