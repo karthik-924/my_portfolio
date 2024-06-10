@@ -69,7 +69,7 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <div id="contact">
       <motion.section
         variants={staggerContainer(0.1, 0.2)}
         initial='hidden'
@@ -146,7 +146,7 @@ const Contact = () => {
           </motion.div>
         </div>
       </motion.section>
-    </>
+    </div>
   );
 }
 

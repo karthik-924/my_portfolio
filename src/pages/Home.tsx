@@ -1,111 +1,51 @@
-import { Canvas } from '@react-three/fiber'
-import { Suspense, useEffect, useRef, useState } from 'react'
-import Loader from '../components/Loader'
-import Island from '../models/Island'
-import Sky from '../models/Sky'
-import Bird from '../models/Bird'
-import Plane from '../models/Plane'
-import HomeInfo from '../components/HomeInfo'
-import sakura from '../assets/sakura.mp3'
-import soundon from '../assets/icons/soundon.png'
-import soundoff from '../assets/icons/soundoff.png'
+import { styles } from '../styles';
+import { motion } from 'framer-motion';
+import ComputersCanvas from '../components/canvas/Computer';
 
 
 const Home = () => {
-    const audioRef = useRef(new Audio(sakura))
-    audioRef.current.loop = true
-    audioRef.current.volume = 0.4
+  return (
+    <section className={`relative w-full h-screen mx-auto`}>
+      <div
+        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+      >
+        <div className='flex flex-col justify-center items-center mt-5'>
+          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
+          <div className='w-1 sm:h-80 h-40 violet-gradient' />
+        </div>
 
-    const [isRotating, setIsRotating] = useState<boolean>(false)
-    const [currentStage, setCurrentStage] = useState<number>(1)
-    const [isPlayingMusic, setIsPlayingMusic] = useState<boolean>(false)
+        <div>
+          <p className={`${styles.heroHeadText} text-white`}>
+            Hi, I'm <span className='text-[#915EFF]'>Karthik</span>
+          </p>
+          <p className={`${styles.heroSubText} max-sm:mt-2 text-white-100`}>
+            I develop full-stack web applications and user interfaces, <br className='sm:block hidden' />
+            and create responsive and intuitive digital solutions.
+          </p>
+        </div>
+      </div>
 
-    useEffect(() => {
-        if (isPlayingMusic) {
-            audioRef.current.play()
-        }
-        else {
-            console.log('pause')
-            audioRef.current.pause()
-        }
-        return () => {
-            // eslint-disable-next-line react-hooks/exhaustive-deps
-            audioRef.current.pause()
-        }
-    }, [isPlayingMusic])
+      <ComputersCanvas />
 
-    const adjustIslandForScreen = () => {
-        let screenScale = null;
-        const screenPostiton = [0, -6.5, -43]
-        const rotation = [0.1, 4.7, 0]
-        if (window.innerWidth < 768) {
-            screenScale = [0.9, 0.9, 0.9]
-        }
-        else {
-            screenScale = [1, 1, 1];
-        }
-        return [screenScale, screenPostiton, rotation]
-    }
-    const adjustPlaneForScreen = () => {
-        let screenScale, screenPosition;
-        if (window.innerWidth < 768) {
-            screenScale = [1.5, 1.5, 1.5]
-            screenPosition = [0, -1.5, 0]
-        }
-        else {
-            screenScale = [3, 3, 3]
-            screenPosition = [0, -4, -4]
-        }
-        return [screenScale, screenPosition]
-    }
-    const [islandScale, islandPosition, rotation] = adjustIslandForScreen()
-    const [planeScale, planePosition] = adjustPlaneForScreen()
-    return (
-        <section className='w-full h-screen relative'>
-            <div className='absolute top-32 left-0 right-0 z-10 flex items-center justify-center'>
-              {currentStage && <HomeInfo currentStage={currentStage}/>}
-            </div>
-            <Canvas className={`w-full h-screen bg-transparent ${isRotating?'cursor-grabbing':'cursor-grab'}`} camera={{ near: 0.1, far: 1000 }}>
-                <Suspense fallback={<Loader />}>
-                    <directionalLight
-                        position={[1, 1, 1]}
-                        intensity={2}
-                    />
-                    <ambientLight intensity={0.5} />
-                    <hemisphereLight
-                        color="#b1e1ff" groundColor="#000000" intensity={1}
-                    />
-                    <Bird />
-                    <Sky
-                        isRotating={isRotating}
-                    />
-                    <Island
-                        position={islandPosition as [x: number, y: number, z: number]}
-                        scale={islandScale as [x: number, y: number, z: number]}
-                        rotation={rotation as [x: number, y: number, z: number]}
-                        isRotating={isRotating}
-                        setIsRotating={setIsRotating}
-                        currentStage={currentStage}
-                        setCurrentStage={setCurrentStage}
-                    />
-                    <Plane
-                        position={planePosition as [x: number, y: number, z: number]}
-                        scale={planeScale as [x: number, y: number, z: number]}
-                        isRotating={isRotating}
-                        rotation={[0, 20.5, 0]}
-                    />
-                </Suspense>
-            </Canvas>
-            <div className='absolute bottom-2 left-2'>
-                <img
-                    src={!isPlayingMusic ? soundon : soundoff}
-                    alt='sound'
-                    className='object-contain w-10 h-10 cursor-pointer'
-                    onClick={() => setIsPlayingMusic(!isPlayingMusic)}
-                />
-            </div>
-        </section>
-    )
+      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
+        <a href='#about'>
+          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
+            <motion.div
+              animate={{
+                y: [0, 24, 0],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className='w-3 h-3 rounded-full bg-secondary mb-1'
+            />
+          </div>
+        </a>
+      </div>
+    </section>
+  );
 }
 
 export default Home

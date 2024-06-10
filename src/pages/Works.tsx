@@ -75,9 +75,9 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <>
+    <div id='projects'>
       <motion.section
-        variants={staggerContainer(0.5, 0.5)}
+        variants={staggerContainer(0.5, 1)}
         initial='hidden'
         whileInView='show'
         viewport={{ once: true, amount: 0.25 }}
@@ -93,7 +93,7 @@ const Works = () => {
 
         <div className='w-full flex'>
           <motion.p
-            variants={fadeIn("", "", 0.1, 1)}
+            variants={fadeIn("", "", 1, 1)}
             className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
           >
             Following projects showcases my skills and experience through
@@ -110,7 +110,7 @@ const Works = () => {
           ))}
         </div>
       </motion.section>
-    </>
+    </div>
   )
 }
 

@@ -30,8 +30,16 @@ import kreaas from '../assets/company/kreaas.jpg'
       title: "About",
     },
     {
-      id: "work",
-      title: "Work",
+      id: "experience",
+      title: "Experience",
+    },
+    {
+      id: "skills",
+      title: "Skills",
+    },
+    {
+      id: "projects",
+      title: "Projects",
     },
     {
       id: "contact",

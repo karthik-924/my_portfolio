@@ -1,28 +1,41 @@
 
-import {Route, BrowserRouter as Router, Routes} from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import './App.css'
 import NavBar from './components/NavBar'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home';
 import About from './pages/About';
 import Experience from './pages/Experience';
+import Tech from './pages/Tech';
+import Works from './pages/Works';
+import Contact from './pages/Contact';
+import StarCanvas from './components/canvas/Stars';
+import '@mantine/core/styles.css';
+import { MantineProvider } from '@mantine/core';
 
 function App() {
-  
+
   return (
-    <main className='bg-slate-300/20'>
+    <MantineProvider>
+      <div className='relative'>
       <Router>
         <NavBar />
-        <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/about' element={<About />} />
-          <Route path='/experience' element={<Experience/>} />
-          <Route path='/contact' element={<h1>Contact</h1>} />
-          <Route path='/projects' element={<h1>Projects</h1>} />
-        </Routes>
-      </Router>
-    </main>
+        <div className='relative z-0 bg-primary'>
+          <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+            <Home />
+          </div>
+          <About />
+          <Experience />
+          <Tech />
+          <Works />
+          <div className='relative z-0'>
+            <Contact />
+            <StarCanvas />
+          </div>
+        </div>
+        </Router>
+        </div>
+    </MantineProvider>
   )
 }
 

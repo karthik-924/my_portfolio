@@ -68,7 +68,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
 
 const Experience = () => {
   return (
-    <>
+    <div id="experience">
       <motion.section
         variants={staggerContainer(0.5, 0.1)}
         initial='hidden'
@@ -100,7 +100,7 @@ const Experience = () => {
         </div>
         
       </motion.section>
-    </>
+    </div>
   );
 
 }
