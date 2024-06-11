@@ -37,7 +37,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className='w-[60%] h-[60%] object-contain'
+            className='w-full h-[90%] object-fill'
           />
         </div>
       }
@@ -76,7 +76,7 @@ const Experience = () => {
         viewport={{ once: true, amount: 0.25 }}
         className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
       >
-        <span className='hash-span' id={"about"}>
+        <span className='hash-span' id={"experience"}>
           &nbsp;
         </span>
         <motion.div variants={textVariant(0.5)}>

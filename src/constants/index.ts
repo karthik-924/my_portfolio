@@ -11,17 +11,14 @@ import redux from "../assets/icons/redux.svg";
 import tailwind from "../assets/tech/tailwind.png";
 import nodejs from "../assets/icons/nodejs.svg";
 import mongodb from "../assets/icons/mongodb.svg";
-import threejs from "../assets/tech/threejs.svg";
 import git from "../assets/icons/git.svg";
-import figma from "../assets/tech/figma.png";
-import docker from "../assets/tech/docker.png";
 import DCMA from '../assets/projects/DCMA.png'
 import merkenlaurel from '../assets/projects/Merkenlaurel.png'
 import pixy from '../assets/projects/Pixy.jpg'
-import srisaiPublicSchool from "../assets/education/sri-sai-public-school.jpg";
-import narayana from "../assets/education/narayana.jpg";
-import vbit from "../assets/education/vbit.png";
-import kreaas from '../assets/company/kreaas.jpg'
+import srisaiPublicSchool from "../assets/education/sri-sai-public-school.png";
+import narayana from "../assets/education/narayana.png";
+import vbit from "../assets/education/vbit2.png";
+import kreaas from '../assets/company/kreaas.png'
 
   
   export const navLinks = [
@@ -70,54 +67,52 @@ import kreaas from '../assets/company/kreaas.jpg'
     {
       name: "HTML 5",
       icon: html,
+      score: 9,
     },
     {
       name: "CSS 3",
       icon: css,
+      score: 8,
     },
     {
       name: "JavaScript",
       icon: javascript,
+      score: 9,
     },
     {
       name: "TypeScript",
       icon: typescript,
+      score: 8.5,
     },
     {
       name: "React JS",
       icon: reactjs,
+      score: 8.5,
     },
     {
       name: "Redux Toolkit",
       icon: redux,
+      score: 8,
     },
     {
       name: "Tailwind CSS",
       icon: tailwind,
+      score: 9,
     },
     {
       name: "Node JS",
       icon: nodejs,
+      score: 7,
     },
     {
       name: "MongoDB",
       icon: mongodb,
-    },
-    {
-      name: "Three JS",
-      icon: threejs,
+      score: 6,
     },
     {
       name: "git",
       icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
+      score: 8.5,
     },
   ];
   
@@ -167,7 +162,7 @@ const experiences = [
       title: "Software Engineer Intern",
       company_name: "KREAAS TECHNOLOGY SOLUTIONS PVT. LTD",
       icon: kreaas, // replace with appropriate icon variable
-      iconBg: "#383E56",
+      iconBg: "#E6DEDD",
       date: "March 2023 - June 2023",
       points: [
         "Led React.js front-end development, translating design mockups into functional and visually appealing interfaces.",
