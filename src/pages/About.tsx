@@ -5,6 +5,7 @@ import { Tilt } from 'react-tilt';
 import { services } from '../constants';
 import { fadeIn, textVariant, staggerContainer, slideIn } from '../utils/motion';
 import karthik from '../assets/karthik.jpg';
+import SocialLinks from '../components/SocialLinks';
 
 
 type Service = {
@@ -68,16 +69,20 @@ const About: React.FC = () => {
 
                             I'm eager to bring my energy and expertise to collaborative projects and contribute to impactful solutions. Let's join forces and turn your ideas into reality!
                         </motion.p>
+
                     </div>
                     {/* <motion.div variants={slideIn("right", "tween", 0.5, 0.5)} className='imagecontainer bg-gradient-to-r from-[#03a9f4] to-[#f441a5] w-[500px] h-[460px] p-1 rounded-full'> */}
-                        <motion.img
-                            variants={slideIn("right", "tween", 0.2, 1)}
-                            src={karthik}
-                            alt='karthik'
-                            className='w-[500px] h-[440px] z-[5] relative rounded-full border border-solid'
-                        />
+                    <motion.img
+                        variants={slideIn("right", "tween", 0.2, 1)}
+                        src={karthik}
+                        alt='karthik'
+                        className='w-[500px] h-[440px] z-[5] relative rounded-full border border-solid'
+                    />
                     {/* </motion.div> */}
                 </div>
+                <motion.div variants={fadeIn("", "", 0.7, 1)} className='w-full flex justify-center p-5'>
+                    <SocialLinks githuburl='https://github.com/karthik-924' linkedinurl='https://www.linkedin.com/in/karthik-emmadi-251699233/' instagramurl='https://www.instagram.com/karthik.924/' />
+                </motion.div>
                 <div className='mt-20 flex flex-wrap gap-10'>
                     {services.map((service, index) => (
                         <ServiceCard key={service.title} index={index} {...service} />

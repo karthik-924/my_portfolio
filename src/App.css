@@ -1,139 +1,249 @@
 nav.navbar {
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    height: 125px;
-    top: 0;
-    z-index: 9999;
-    transition:  0.32s ease-in-out;
-  }
-  nav.navbar.scrolled {
-    padding: 0px 0;
-  }
- 
-  nav.navbar .navbar-nav .nav-link.navbar-link {
-    font-weight: 400;
-    letter-spacing: 0.8px;
-    padding: 0 25px;
-    font-size: 18px;
-    opacity: 0.75;
-  }
-  nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
-  nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-      opacity: 1;
-  }
-  span.navbar-text {
-      display: flex;
-      align-items: center;
-  }
-  .social-icon {
-      display: inline-block;
-      margin-left: 10px;
-  }
-  .social-icon a {
-      width: 42px;
-      height: 42px;
-      background: #915EFF;
-      display: inline-flex;
-      border-radius: 50%;
-      margin-right: 6px;
-      align-items: center;
-      justify-content: center;
-      line-height: 1;
-      border: 1px solid black;
-  }
-  .social-icon a::before {
-      content: "";
-      width: 42px;
-      height: 42px;
-      position: absolute;
-      background-color: #47A23E;
-      border-radius: 50%;
-      transform: scale(0);
-      transition: 0.3s ease-in-out;
-  }
-  .social-icon a:hover::before {
-      transform: scale(1);
-  }
-  .social-icon a img {
-      width: 40%;
-      z-index: 1;
-      transition: 0.3s ease-in-out;
-  }
-  .social-icon a:hover img {
-      filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
-  }
-  .navbar-text button {
-    font-weight: 700;
-    color: white;
-    border: 1px solid #7AD571;
-    padding: 15px 25px;
-    font-size: 18px;
-    margin-left: 18px;
-      position: relative;
-      background-color: transparent;
-      transition: 0.3s ease-in-out;
-  }
-  .navbar-text button span {
-    z-index: 1;
-  }
-  .navbar-text button::before {
-    content: "";
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    background-color: #47A23E;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    transition: 0.3s ease-in-out;
-  }
-  .navbar-text button:hover {
-    color: white;
-  }
-  .navbar-text button:hover::before {
-      content: "";
-      width: 100%;
-      height: 100%;
-      position: absolute;
-  }
-  
-  .hamburger {
-    cursor: pointer;
-  }
-  
-  .hamburger input {
-    display: none;
-  }
-  
-  .hamburger svg {
-    /* The size of the SVG defines the overall size */
-    height: 3em;
-    /* Define the transition for transforming the SVG */
-    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .line {
-    fill: none;
-    stroke: white;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 3;
-    /* Define the transition for transforming the Stroke */
-    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .line-top-bottom {
-    stroke-dasharray: 12 63;
-  }
-  
-  .hamburger input:checked + svg {
-    transform: rotate(-45deg);
-  }
-  
-  .hamburger input:checked + svg .line-top-bottom {
-    stroke-dasharray: 20 300;
-    stroke-dashoffset: -32.42;
-  }
-  
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  height: 125px;
+  top: 0;
+  z-index: 9999;
+  transition: 0.32s ease-in-out;
+}
+nav.navbar.scrolled {
+  padding: 0px 0;
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+  opacity: 1;
+}
+span.navbar-text {
+  display: flex;
+  align-items: center;
+}
+.social-icon {
+  display: inline-block;
+  margin-left: 10px;
+}
+.social-icon a {
+  width: 42px;
+  height: 42px;
+  background: #915eff;
+  display: inline-flex;
+  border-radius: 50%;
+  margin-right: 6px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid black;
+}
+.social-icon a::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  background-color: #47a23e;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+}
+.social-icon a:hover::before {
+  transform: scale(1);
+}
+.social-icon a img {
+  width: 40%;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+.social-icon a:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)
+    hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+.navbar-text button {
+  font-weight: 700;
+  color: white;
+  border: 1px solid #7ad571;
+  padding: 15px 25px;
+  font-size: 18px;
+  margin-left: 18px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+}
+.navbar-text button span {
+  z-index: 1;
+}
+.navbar-text button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #47a23e;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+.navbar-text button:hover {
+  color: white;
+}
+.navbar-text button:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 3em;
+  /* Define the transition for transforming the SVG */
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  /* Define the transition for transforming the Stroke */
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.card2 {
+  width: 185px;
+  height: 90px;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 90px 90px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.linkedin {
+  fill: #0077b5;
+  margin-top: 10px;
+}
+
+.card3 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.github {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.card4 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
+
+.instagram {
+  fill: #cc39a4;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #0077b5;
+}
+
+.card2:hover .linkedin {
+  fill: white;
+}
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: black;
+}
+
+.card3:hover .github {
+  fill: white;
+}
+
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+}
+
+.card4:hover .instagram {
+  fill: white;
+}
+
