@@ -17,7 +17,7 @@ type Service = {
 const ServiceCard: React.FC<Service> = ({ index, title, icon }) => (
     <Tilt className='xs:w-[250px] w-full'>
         <motion.div
-            variants={fadeIn("right", "spring", index * 1, 0.75)}
+            variants={fadeIn("right", "spring", index * 1, 0.25)}
             className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
         >
             <div
@@ -80,10 +80,14 @@ const About: React.FC = () => {
                     />
                     {/* </motion.div> */}
                 </div>
-                <motion.div variants={fadeIn("", "", 0.7, 1)} className='w-full flex justify-center p-5'>
+                <div className='flex'>
+                <motion.h2 variants={fadeIn("", "", 0.7, 1)} className={`${styles.sectionHeadText} start-0`}>Connect with me</motion.h2>
+                <motion.div variants={fadeIn("", "", 0.7, 1)} className='w-full flex ml-auto'>
+                    
                     <SocialLinks githuburl='https://github.com/karthik-924' linkedinurl='https://www.linkedin.com/in/karthik-emmadi-251699233/' instagramurl='https://www.instagram.com/karthik.924/' />
-                </motion.div>
-                <div className='mt-20 flex flex-wrap gap-10'>
+                    </motion.div>
+                    </div>
+                <div className='mt-20 w-full flex flex-wrap gap-5'>
                     {services.map((service, index) => (
                         <ServiceCard key={service.title} index={index} {...service} />
                     ))}

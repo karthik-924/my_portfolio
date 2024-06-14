@@ -70,7 +70,7 @@ const Experience = () => {
   return (
     <div id="experience">
       <motion.section
-        variants={staggerContainer(0.5, 0.1)}
+        variants={staggerContainer(0.2, 0.1)}
         initial='hidden'
         whileInView='show'
         viewport={{ once: true, amount: 0.25 }}
@@ -79,7 +79,7 @@ const Experience = () => {
         <span className='hash-span' id={"experience"}>
           &nbsp;
         </span>
-        <motion.div variants={textVariant(0.5)}>
+        <motion.div variants={textVariant(0.2)}>
           <p className={`${styles.sectionSubText} text-center`}>
             What I have done so far
           </p>

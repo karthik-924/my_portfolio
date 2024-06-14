@@ -10,7 +10,7 @@ const loaderAnimation = (width: number) => ({
   show: {
     width: `${width}%`,
     transition: {
-      duration: 2,
+      duration: 1,
       ease: "easeOut"
     }
   }

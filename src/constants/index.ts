@@ -177,7 +177,7 @@ const experiences = [
   
   const projects = [
     {
-      name: "Decentralized Governance Application",
+      name: "Decentralized Management Application",
       description:
         "Team-developed project for college committee management, streamlining scheduling and reminders for faculty. Developed a robust notification system to ensure timely reminders for scheduled meetings. Seamlessly integrated frontend and backend and made the application mobile responsive.",
       tags: [
@@ -187,27 +187,28 @@ const experiences = [
         },
         {
           name: "typescript",
-          color: "green-text-gradient",
-        },
-        {
-          name: "redux",
           color: "pink-text-gradient",
         },
         {
+          name: "redux",
+          color: "orange-text-gradient",
+        },
+        {
           name: "mantineui",
-          color: "purple-text-gradient",
+          color: "green-text-gradient",
         },
         {
           name: "tailwindcss",
-          color: "teal-text-gradient",
+          color: "blue-text-gradient",
         },
         {
           name: "firebase",
-          color: "orange-text-gradient",
+          color: "pink-text-gradient",
         },
       ],
       image: DCMA, 
       source_code_link: "https://github.com/",
+      demo_link: "",
     },
     {
       name: "Merkenlaurel - Anime Merchandise E-commerce Application",
@@ -216,31 +217,32 @@ const experiences = [
       tags: [
         {
           name: "nextjs",
-          color: "blue-text-gradient",
+          color: "blue-text-gradient"
         },
         {
           name: "typescript",
-          color: "green-text-gradient",
-        },
-        {
-          name: "redux",
           color: "pink-text-gradient",
         },
         {
+          name: "redux",
+          color: "orange-text-gradient",
+        },
+        {
           name: "mantineui",
-          color: "purple-text-gradient",
+          color: "green-text-gradient",
         },
         {
           name: "tailwindcss",
-          color: "teal-text-gradient",
+          color: "blue-text-gradient",
         },
         {
           name: "firebase",
-          color: "orange-text-gradient",
+          color: "pink-text-gradient",
         },
       ],
       image: merkenlaurel, 
       source_code_link: "https://github.com/",
+      demo_link: "",
     },
     {
       name: "Pixy - AI-Powered Chatbot",
@@ -261,11 +263,12 @@ const experiences = [
         },
         {
           name: "openaiapi",
-          color: "purple-text-gradient",
+          color: "orange-text-gradient",
         },
       ],
       image: pixy, 
-      source_code_link: "https://github.com/", 
+      source_code_link: "https://github.com/",
+      demo_link: "",
     },
   ];
   

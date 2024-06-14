@@ -247,3 +247,63 @@ span.navbar-text {
   fill: white;
 }
 
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 5px;
+  width: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: black;
+  cursor: pointer;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.bracket {
+  font-size: 14px;
+  transition: all 0.3s;
+  color: rgb(182, 104, 255);
+}
+.text {
+  font-size: 10px;
+  width: 0;
+  transform: scale(0);
+  transition: all 0.3s;
+  color: rgb(9,188,9);
+}
+.button:hover {
+  width: 60px;
+}
+.button:hover .text {
+  transform: scale(1);
+  width: 30px;
+}
+
+.githubbtn {
+  display: grid;
+  place-items: center;
+  background: #e3edf7;
+  padding: 0.2em;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.githubbtn:hover {
+  border: 1px solid rgba(0,0,0,0.1);
+  transform: translateY(0.3em);
+}
+
+.githubbtn svg {
+  transition: transform 0.5s;
+}
+
+.githubbtn:hover svg {
+  transform: scale(0.9);
+  fill: #333333;
+}
+
+
