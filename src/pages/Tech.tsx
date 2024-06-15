@@ -23,13 +23,13 @@ const Tech = () => {
           <p className={`${styles.sectionSubText} `}>My skills</p>
           <h2 className={`${styles.sectionHeadText}`}>Tech.</h2>
         </motion.div>
-        <div className="w-full flex flex-col">
+        <div className="w-full flex flex-col max-sm:gap-10">
           {technologies.map((technology: { name: string, icon: string, score: number }) => (
-            <div className="w-full flex" key={technology.name}>
+            <div className="w-full flex max-sm:flex-col justify-center items-center" key={technology.name}>
               <div className='w-28 h-28' >
                 <BallCanvas icon={technology.icon} />
               </div>
-              <div className="w-full px-10 h-full mt-5 flex flex-col gap-5">
+              <div className="w-full px-10 max-md:px-5 h-full mt-5 flex flex-col gap-5">
                 <div className="w-full flex justify-between">
                   <motion.h4
                     variants={textVariant(0.3)}

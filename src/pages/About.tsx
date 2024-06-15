@@ -80,13 +80,13 @@ const About: React.FC = () => {
                     />
                     {/* </motion.div> */}
                 </div>
-                <div className='flex'>
-                <motion.h2 variants={fadeIn("", "", 0.7, 1)} className={`${styles.sectionHeadText} start-0`}>Connect with me</motion.h2>
-                <motion.div variants={fadeIn("", "", 0.7, 1)} className='w-full flex ml-auto'>
-                    
-                    <SocialLinks githuburl='https://github.com/karthik-924' linkedinurl='https://www.linkedin.com/in/karthik-emmadi-251699233/' instagramurl='https://www.instagram.com/karthik.924/' />
+                <div className='flex max-sm:flex-col max-sm:justify-center max-sm:items-center'>
+                    <motion.h2 variants={fadeIn("", "", 0.7, 1)} className={`${styles.sectionHeadText} start-0`}>Connect with me</motion.h2>
+                    <motion.div variants={fadeIn("", "", 0.7, 1)} className='w-full flex max-sm:justify-center max-sm:items-center ml-auto'>
+
+                        <SocialLinks githuburl='https://github.com/karthik-924' linkedinurl='https://www.linkedin.com/in/karthik-emmadi-251699233/' instagramurl='https://www.instagram.com/karthik.924/' />
                     </motion.div>
-                    </div>
+                </div>
                 <div className='mt-20 w-full flex flex-wrap gap-5'>
                     {services.map((service, index) => (
                         <ServiceCard key={service.title} index={index} {...service} />
