@@ -12,8 +12,10 @@ import Contact from './pages/Contact';
 import StarCanvas from './components/canvas/Stars';
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
+import { useState } from 'react';
 
 function App() {
+
 
   return (
     <MantineProvider>
@@ -22,7 +24,7 @@ function App() {
         <NavBar />
         <div className='relative z-0 bg-primary'>
           <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-            <Home />
+              <Home  />
           </div>
           <About />
           <Experience />

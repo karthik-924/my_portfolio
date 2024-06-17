@@ -47,7 +47,7 @@ const NavBar = () => {
           <Name />
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='max-[830px]:list-none max-[830px]:hidden flex flex-row gap-10'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -60,8 +60,8 @@ const NavBar = () => {
           ))}
         </ul>
 
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <button className="md:hidden">
+        <div className='hidden max-[830px]:flex flex-1 justify-end items-center'>
+          <button>
             <label className="hamburger">
               <input id='menucheck' type="checkbox" onChange={handleChange} />
               <svg viewBox="0 0 32 32">
