@@ -12,11 +12,8 @@ import Contact from './pages/Contact';
 import StarCanvas from './components/canvas/Stars';
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
-import { useState } from 'react';
 
 function App() {
-
-
   return (
     <MantineProvider>
       <div className='relative'>
