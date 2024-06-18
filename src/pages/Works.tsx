@@ -7,6 +7,7 @@ import { fadeIn, staggerContainer, textVariant } from '../utils/motion'
 import ProjectCardMobile from '../components/ProjectCardMobile';
 import GithubButton from '../components/GithubButton';
 import DemoButton from '../components/DemoButton';
+import React from 'react';
 
 type Props = {
   index: number
@@ -39,8 +40,8 @@ const ProjectCard = ({
         >
           <div className='relative w-full h-full'>
             <img src={image} alt={name} className='w-full h-full max-h-96 object-contain rounded-md' />
-            <GithubButton url={source_code_link} />
-            <DemoButton demolink={demo_link} />
+            {source_code_link !== "" && <GithubButton url={source_code_link} />}
+            {demo_link !== "" && <DemoButton demolink={demo_link} />}
           </div>
         </motion.div>
         <motion.div
@@ -96,8 +97,8 @@ const ProjectCard = ({
         >
           <div className='relative w-full h-full'>
             <img src={image} alt={name} className='w-full h-full max-h-96 object-contain rounded-md' />
-            <GithubButton url={source_code_link} />
-            <DemoButton demolink={demo_link} />
+            {source_code_link !== "" && <GithubButton url={source_code_link} />}
+            {demo_link !== "" && <DemoButton demolink={demo_link} />}
           </div>
         </motion.div>
       </div>
@@ -138,10 +139,10 @@ const Works = () => {
 
         <div className='mt-20 flex flex-wrap gap-7'>
           {projects.map((project, index) => (
-            <>
+            <React.Fragment key={index}>
               <ProjectCard key={`project-${index}`} index={index} {...project} />
-              <ProjectCardMobile key={`project-${index}`} index={index} {...project} />
-            </>
+              <ProjectCardMobile key={`project-${index+1}`} index={index+1} {...project} />
+            </React.Fragment>
           ))}
         </div>
       </motion.section>

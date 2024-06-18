@@ -60,8 +60,8 @@ const About: React.FC = () => {
                     &nbsp;
                 </span>
                 <div className='xl:mt-12 flex max-lg:flex-col-reverse flex-row gap-10 items-center overflow-hidden'>
-                    <div className='flex-col flex max-sm:justify-center max-sm:items-center'>
-                        <motion.div className='max-sm:flex max-sm:flex-col max-sm:w-full max-sm:justify-center max-sm:items-center' variants={textVariant(0.5)}>
+                    <div className='flex-col flex '>
+                        <motion.div className='max-sm:flex max-sm:flex-col' variants={textVariant(0.5)}>
                             <p className={styles.sectionSubText}>Introduction</p>
                             <h2 className={styles.sectionHeadText}>Overview</h2>
                         </motion.div>

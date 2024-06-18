@@ -23,6 +23,7 @@ const ProjectCardMobile = ({
   source_code_link,
   demo_link,
 }: Props) => {
+  console.log(demo_link)
   return (
     <motion.div className='lg:hidden' variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -40,8 +41,8 @@ const ProjectCardMobile = ({
             className='w-full h-full object-cover rounded-2xl'
           />
 
-          <GithubButton url={source_code_link} />
-          <DemoButton demolink={demo_link} />
+          {source_code_link !== "" && <GithubButton url={source_code_link} />}
+          {demo_link !== "" && <DemoButton demolink={demo_link} />}
         </div>
 
         <div className='mt-5'>
