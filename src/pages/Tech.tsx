@@ -29,7 +29,8 @@ const Tech = () => {
         <span className='hash-span' id={"about"}>
           &nbsp;
         </span>
-        <motion.div variants={textVariant(0.2)} className=" text-center">
+        <motion.div initial='hidden'
+          whileInView='show' variants={textVariant(0.2)} className=" text-center">
           <p className={`${styles.sectionSubText} `}>My skills</p>
           <h2 className={`${styles.sectionHeadText}`}>Tech.</h2>
         </motion.div>
@@ -42,10 +43,13 @@ const Tech = () => {
               <div className="w-full px-10 max-md:px-5 h-full mt-5 max-sm:mt-2 flex flex-col gap-5">
                 <div className="w-full flex justify-between">
                   <motion.h4
+                    initial='hidden'
+                    whileInView='show'
                     variants={textVariant(0.3)}
                     className="text-white-100 text-[20px] font-bold"
                   >{technology.name}</motion.h4>
-                  <motion.h4 variants={textVariant(0.3)} className="text-white-100 text-[20px] font-bold">{technology.score * 10}%</motion.h4>
+                  <motion.h4 initial='hidden'
+                    whileInView='show' variants={textVariant(0.3)} className="text-white-100 text-[20px] font-bold">{technology.score * 10}%</motion.h4>
                 </div>
                 <Points score={technology.score} />
               </div>
