@@ -12,20 +12,31 @@ import tailwind from "../assets/tech/tailwind.png";
 import nodejs from "../assets/icons/nodejs.svg";
 import mongodb from "../assets/icons/mongodb.svg";
 import git from "../assets/icons/git.svg";
+import express from "../assets/icons/express.svg";
 import DCMA from "../assets/projects/DCMA.png";
 import merkenlaurel from "../assets/projects/Merkenlaurel.png";
 import pixy from "../assets/projects/Pixy.jpg";
 import srisaiPublicSchool from "../assets/education/sri-sai-public-school.png";
 import narayana from "../assets/education/narayana.png";
 import vbit from "../assets/education/vbit2.png";
+import restapi from "../assets/tech/restapi.png";
 import kreaas from "../assets/company/kreaas.png";
 import nextjs from "../assets/tech/nextjs.svg";
+import angular from "../assets/tech/angular.svg";
 import cplus from "../assets/tech/c.svg";
+import reactnative from "../assets/tech/reactnative.svg";
 import firebase from "../assets/tech/firebase.svg";
 import java from "../assets/tech/java.svg";
 import python from "../assets/tech/python.svg";
 import mysql from "../assets/tech/mysql.svg";
 import oracle from "../assets/tech/oracle.svg";
+import aws from "../assets/tech/aws.svg";
+import azuredevops from "../assets/tech/azuredevops.svg";
+import accenture from "../assets/company/accenture.png";
+import postman from "../assets/tech/postman.svg";
+import agile from "../assets/tech/agile.png";
+import problemsolving from "../assets/tech/problems.png";
+import teamwork from "../assets/tech/teamwork.png";
 
 export const navLinks = [
   {
@@ -70,149 +81,236 @@ const services = [
 ];
 
 const technologies = [
+  // Frontend Technologies
   {
     name: "HTML 5",
     icon: html,
-    score: 9,
+    proficiency: "Advanced",
   },
   {
     name: "CSS 3",
     icon: css,
-    score: 8,
+    proficiency: "Advanced",
   },
   {
     name: "JavaScript",
     icon: javascript,
-    score: 9,
+    proficiency: "Intermediate",
   },
   {
     name: "TypeScript",
     icon: typescript,
-    score: 8.5,
-  },
-  {
-    name: "C++",
-    icon: cplus,
-    score: 6,
-  },
-  {
-    name: "Java",
-    icon: java,
-    score: 6,
-  },
-  {
-    name: "Python",
-    icon: python,
-    score: 8,
+    proficiency: "Intermediate",
   },
   {
     name: "React JS",
     icon: reactjs,
-    score: 8.5,
+    proficiency: "Intermediate",
   },
   {
     name: "Next JS",
     icon: nextjs,
-    score: 6.5,
+    proficiency: "Beginner",
   },
   {
     name: "Redux Toolkit",
     icon: redux,
-    score: 8,
+    proficiency: "Beginner",
+  },
+  {
+    name: "Angular",
+    icon: angular,
+    proficiency: "Beginner",
+  },
+  {
+    name: "React Native",
+    icon: reactnative,
+    proficiency: "Intermediate",
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
-    score: 9,
+    proficiency: "Advanced",
   },
+
+  // Backend Technologies
   {
     name: "Node JS",
     icon: nodejs,
-    score: 7,
+    proficiency: "Intermediate",
   },
+  {
+    name: "Express JS",
+    icon: express,
+    proficiency: "Beginner",
+  },
+  {
+    name: "RESTful APIs",
+    icon: restapi,
+    proficiency: "Beginner",
+  },
+
+  // Programming Languages
+  {
+    name: "C++",
+    icon: cplus,
+    proficiency: "Beginner",
+  },
+  {
+    name: "Java",
+    icon: java,
+    proficiency: "Beginner",
+  },
+  {
+    name: "Python",
+    icon: python,
+    proficiency: "Intermediate",
+  },
+
+  // Databases
   {
     name: "MongoDB",
     icon: mongodb,
-    score: 6,
+    proficiency: "Intermediate",
   },
   {
     name: "MySQL",
     icon: mysql,
-    score: 7,
+    proficiency: "Beginner",
   },
   {
     name: "Oracle DB",
     icon: oracle,
-    score: 8,
+    proficiency: "Beginner",
   },
   {
     name: "Firebase",
     icon: firebase,
-    score: 8,
+    proficiency: "Intermediate",
+  },
+
+  // Cloud & DevOps
+  {
+    name: "AWS",
+    icon: aws,
+    proficiency: "Beginner",
   },
   {
-    name: "git",
+    name: "Azure DevOps",
+    icon: azuredevops,
+    proficiency: "Beginner",
+  },
+
+  // Tools & Testing
+  {
+    name: "Git",
     icon: git,
-    score: 8.5,
+    proficiency: "Intermediate",
+  },
+  {
+    name: "Postman",
+    icon: postman,
+    proficiency: "Intermediate",
+  },
+
+  // Soft Skills & Agile
+  {
+    name: "Agile Methodologies",
+    icon: agile,
+    proficiency: "Intermediate",
+  },
+  {
+    name: "Problem-Solving",
+    icon: problemsolving,
+    proficiency: "Intermediate",
+  },
+  {
+    name: "Team Collaboration",
+    icon: teamwork,
+    proficiency: "Advanced",
   },
 ];
 
-const experiences = [
+
+const education = [
   {
     title: "Indian Certificate of Secondary Education",
     company_name: "Sri Sai Public School",
-    icon: srisaiPublicSchool,
+    icon: srisaiPublicSchool, // replace with appropriate icon variable
     iconBg: "#383E56",
-    date: "2017 - 2018",
+    date: "June 2017 – March 2018",
     points: [
-      "Percentage: 85%",
-      "Learnt basic Java from my school.",
-      "Gained initial exposure to computer programming and software development.",
-      "Developed a strong interest in technology and programming.",
+      "Percentage: 84.67%",
+      "Gained initial exposure to computer programming, learning the basics of Java.",
+      "Developed a keen interest in software development and emerging technologies.",
+      "Built early problem-solving abilities and a logical mindset through academic coursework.",
     ],
   },
   {
     title: "Intermediate in MPC Stream",
     company_name: "Narayana Junior College",
-    icon: narayana,
+    icon: narayana, // replace with appropriate icon variable
     iconBg: "#E6DEDD",
-    date: "2018 - 2020",
+    date: "June 2018 – March 2020",
     points: [
-      "Percentage: 92%",
-      "Learnt basic math and science which helped me in my journey.",
-      "Developed strong analytical and problem-solving skills.",
-      "Studied Mathematics, Physics, and Chemistry in depth, which provided a solid foundation for engineering studies.",
+      "Percentage: 91.70%",
+      "Developed strong analytical and problem-solving skills through intensive coursework in Mathematics, Physics, and Chemistry.",
+      "Built a solid foundation in logical reasoning and numerical problem-solving, essential for engineering and software development.",
+      "Excelled in competitive exams, securing a high percentile in technical subjects.",
     ],
   },
   {
     title: "Bachelor of Technology in Information Technology",
     company_name: "Vignana Bharathi Institute of Technology",
-    icon: vbit,
+    icon: vbit, // replace with appropriate icon variable
     iconBg: "#383E56",
-    date: "Expected 2024",
+    date: "Nov 2020 – April 2024",
     points: [
-      "CGPA: 8.3",
-      "Relevant Coursework: Data Structures, Machine Learning, Database Management System, Software Engineering.",
-      "Gained foundational knowledge in software development and data management.",
-      "Engaged in various projects and lab work to apply theoretical knowledge in practical scenarios.",
+      "CGPA: 8.34",
+      "Relevant Coursework: Data Structures & Algorithms, Machine Learning, Database Management System, Software Engineering.",
+      "Acquired strong technical foundations in software development, cloud computing, and web technologies.",
+      "Worked on various academic projects, applying theoretical knowledge to real-world applications.",
+      "Participated in coding competitions and hackathons, showcasing problem-solving skills and technical expertise.",
+      "Gained experience in full-stack development through coursework and hands-on projects."
     ],
   },
 
+];
+
+const experiences = [
   {
     title: "Software Engineer Intern",
-    company_name: "KREAAS TECHNOLOGY SOLUTIONS PVT. LTD",
+    company_name: "KREAAS Technology Solutions Pvt. Ltd",
     icon: kreaas, // replace with appropriate icon variable
     iconBg: "#E6DEDD",
-    date: "March 2023 - June 2023",
+    date: "March 2023 – June 2023",
     points: [
-      "Led React.js front-end development, translating design mockups into functional and visually appealing interfaces.",
-      "Ensured seamless front-end to back-end communication, significantly enhancing user experience.",
-      "Proactively collaborated with cross-functional team, providing valuable insights for efficient project achievement.",
-      "Worked on bug fixes and performance improvements to maintain high-quality standards.",
-      "Gained hands-on experience in agile methodologies and participated in daily stand-ups and sprint planning.",
+      "Led front-end development using React, translating design mockups into functional and visually appealing interfaces.",
+      "Achieved 100% task completion and enhanced interface responsiveness by 20% through performance optimizations.",
+      "Streamlined development workflows by integrating Azure DevOps for task management, version control, and CI/CD pipelines.",
+      "Mentored junior developers on React.js fundamentals, improving team efficiency and knowledge-sharing.",
+      "Collaborated with backend developers to integrate RESTful APIs, ensuring seamless data communication between frontend and backend.",
+      "Worked on bug fixes and performance improvements, maintaining high-quality code standards and optimizing application speed.",
+      "Gained hands-on experience with agile methodologies, actively participating in daily stand-ups, sprint planning, and retrospectives.",
+    ],
+  },
+  {
+    title: "Packaged Application Developer Associate",
+    company_name: "Accenture",
+    icon: accenture, // replace with appropriate icon variable
+    iconBg: "#E6DEDD",
+    date: "Aug 2024 – Present",
+    points: [
+      "Achieved MEAN Stack Certification, scoring 85% in assessments and 95% in hands-on evaluations.",
+      "Recognized as a Merit Holder, ranking among the top 5 in the cohort.",
+      "Currently working as a Frontend Developer on a Leaves & Payroll Management module, focusing on Angular development.",
+      "Collaborating with backend developers to enhance API efficiency and ensure seamless integration.",
+      "Implementing UI/UX improvements to optimize user interaction and improve performance.",
+      "Actively contributing to Agile development cycles, participating in daily stand-ups, sprint planning, and code reviews.",
     ],
   },
 ];
+
 
 const projects = [
   {
@@ -311,4 +409,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects };
+export { services, technologies,education, experiences, projects };

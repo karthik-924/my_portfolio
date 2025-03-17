@@ -70,14 +70,11 @@ const About: React.FC = () => {
                             variants={fadeIn("", "", 0.7, 1)}
                             className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
                         >
-                            I'm a passionate self-taught software developer with a solid grounding in TypeScript and JavaScript, and hands-on experience with frameworks like React, Node.js, and Express.js.
-                            As a fresher, I've already made my mark through internships and diverse projects, showcasing my ability to build efficient, scalable, and user-friendly solutions.
-
-                            My curiosity drives me to continuously learn and grow. Currently, I'm diving into the exciting worlds of competitive programming and machine learning.
-                            Participating in competitive programming challenges sharpens my problem-solving skills, while my exploration of machine learning opens new avenues for innovation.
-                            Additionally, I'm exploring Three.js to create immersive 3D web experiences.
-
-                            I'm eager to bring my energy and expertise to collaborative projects and contribute to impactful solutions. Let's join forces and turn your ideas into reality!
+                            I am a passionate and self-driven Full Stack Developer with expertise in TypeScript, JavaScript, and frameworks like React, Next.js, Node.js, and Express.js. With hands-on experience in building scalable and efficient web applications, I have honed my skills through internships, freelance projects, and hackathons, showcasing my ability to deliver user-friendly solutions.
+                            <br />
+                            Currently, I am actively enhancing my MEAN and MERN stack development skills, along with cloud technologies like AWS and Azure DevOps. My curiosity extends to competitive programming, machine learning, and 3D web development with Three.js, constantly pushing me to explore new dimensions of technology.
+                            <br />
+                            Beyond technical skills, I bring a problem-solving mindset, adaptability, and a collaborative spirit to every project. Whether it's developing high-performance web applications or tackling algorithmic challenges, I am eager to contribute to innovative and impactful solutions. Let's connect and build something amazing! 🚀
                         </motion.p>
 
                     </div>

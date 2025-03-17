@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
-import { experiences } from "../constants";
+import { education, experiences } from "../constants";
 import { textVariant,staggerContainer } from "../utils/motion";
 
 
@@ -83,6 +83,34 @@ const Experience = () => {
           <p className={`${styles.sectionSubText} text-center`}>
             What I have done so far
           </p>
+          <h2 className={`${styles.sectionHeadText} text-center`}>
+            Education.
+          </h2>
+        </motion.div>
+
+        <div className='mt-20 flex flex-col'>
+          <VerticalTimeline>
+            {education.map((educ, index) => (
+              <ExperienceCard
+                key={`experience-${index}`}
+                experience={educ}
+              />
+            ))}
+          </VerticalTimeline>
+        </div>
+        
+      </motion.section>
+      <motion.section
+        variants={staggerContainer(0.2, 0.1)}
+        initial='hidden'
+        whileInView='show'
+        viewport={{ once: true, amount: 0.25 }}
+        className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+      >
+        <span className='hash-span' id={"experience"}>
+          &nbsp;
+        </span>
+        <motion.div variants={textVariant(0.2)}>
           <h2 className={`${styles.sectionHeadText} text-center`}>
             Work Experience.
           </h2>
