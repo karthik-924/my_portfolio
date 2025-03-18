@@ -35,7 +35,7 @@ const Tech = () => {
           <h2 className={`${styles.sectionHeadText}`}>Tech.</h2>
         </motion.div>
         <div className="w-full flex flex-col gap-5 max-sm:gap-10 max-sm:mt-5">
-          {technologies.map((technology: { name: string, icon: string, score: number }) => (
+          {technologies.map((technology: { name: string, icon: string, proficiency: string }) => (
             <div className="w-full flex max-sm:flex-col justify-center items-center" key={technology.name}>
               <div className={`w-28 h-28`} >
                 <img src={technology.icon} alt={technology.name} className='w-28 h-28 object-contain' />
@@ -49,9 +49,9 @@ const Tech = () => {
                     className="text-white-100 text-[20px] font-bold"
                   >{technology.name}</motion.h4>
                   <motion.h4 initial='hidden'
-                    whileInView='show' variants={textVariant(0.3)} className="text-white-100 text-[20px] font-bold">{technology.score * 10}%</motion.h4>
+                    whileInView='show' variants={textVariant(0.3)} className="text-white-100 text-[20px] font-bold">{technology.proficiency}</motion.h4>
                 </div>
-                <Points score={technology.score} />
+                <Points score={technology.proficiency as "Beginner" | "Intermediate" | "Advanced" | "Expert"} />
               </div>
             </div>
           ))}
