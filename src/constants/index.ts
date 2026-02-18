@@ -34,9 +34,9 @@ import aws from "../assets/tech/aws.png";
 import azuredevops from "../assets/tech/azuredevops.svg";
 import accenture from "../assets/company/accenture.png";
 import postman from "../assets/tech/postman.svg";
-import agile from "../assets/tech/agile.png";
-import problemsolving from "../assets/tech/problems.png";
-import teamwork from "../assets/tech/teamwork.png";
+import firestore from "../assets/firestore.jpg";
+import cicd from "../assets/cicd.png";
+import spanner from "../assets/spanner.png";
 
 export const navLinks = [
   {
@@ -63,319 +63,153 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Frontend Developer",
-    icon: web,
-  },
-  {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
     title: "Full Stack Developer",
+    icon: creator,
+  },
+  {
+    title: "Backend Developer (Node.js)",
     icon: backend,
   },
   {
-    title: "Software Engineer",
-    icon: creator,
+    title: "MEAN Stack Developer",
+    icon: web,
+  },
+  {
+    title: "MERN Stack Developer",
+    icon: mobile,
   },
 ];
 
 const technologies = [
-  // Frontend Technologies
-  {
-    name: "HTML 5",
-    icon: html,
-    proficiency: "Advanced",
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-    proficiency: "Advanced",
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-    proficiency: "Intermediate",
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-    proficiency: "Intermediate",
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-    proficiency: "Intermediate",
-  },
-  {
-    name: "Next JS",
-    icon: nextjs,
-    proficiency: "Beginner",
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-    proficiency: "Beginner",
-  },
-  {
-    name: "Angular",
-    icon: angular,
-    proficiency: "Beginner",
-  },
-  {
-    name: "React Native",
-    icon: reactnative,
-    proficiency: "Intermediate",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-    proficiency: "Advanced",
-  },
+  // Frontend
+  { name: "HTML5", icon: html, proficiency: "Advanced" },
+  { name: "CSS3", icon: css, proficiency: "Advanced" },
+  { name: "JavaScript", icon: javascript, proficiency: "Advanced" },
+  { name: "TypeScript", icon: typescript, proficiency: "Intermediate" },
+  { name: "React.js", icon: reactjs, proficiency: "Intermediate" },
+  { name: "Next.js", icon: nextjs, proficiency: "Intermediate" },
+  { name: "Redux Toolkit", icon: redux, proficiency: "Intermediate" },
+  { name: "Angular", icon: angular, proficiency: "Intermediate" },
+  { name: "React Native", icon: reactnative, proficiency: "Intermediate" },
+  { name: "Tailwind CSS", icon: tailwind, proficiency: "Advanced" },
 
-  // Backend Technologies
-  {
-    name: "Node JS",
-    icon: nodejs,
-    proficiency: "Intermediate",
-  },
-  {
-    name: "Express JS",
-    icon: express,
-    proficiency: "Beginner",
-  },
-  {
-    name: "RESTful APIs",
-    icon: restapi,
-    proficiency: "Beginner",
-  },
-
-  // Programming Languages
-  {
-    name: "C++",
-    icon: cplus,
-    proficiency: "Beginner",
-  },
-  {
-    name: "Java",
-    icon: java,
-    proficiency: "Beginner",
-  },
-  {
-    name: "Python",
-    icon: python,
-    proficiency: "Intermediate",
-  },
+  // Backend
+  { name: "Node.js", icon: nodejs, proficiency: "Intermediate" },
+  { name: "Express.js", icon: express, proficiency: "Intermediate" },
+  { name: "REST APIs", icon: restapi, proficiency: "Advanced" },
 
   // Databases
-  {
-    name: "MongoDB",
-    icon: mongodb,
-    proficiency: "Intermediate",
-  },
-  {
-    name: "MySQL",
-    icon: mysql,
-    proficiency: "Beginner",
-  },
-  {
-    name: "Oracle DB",
-    icon: oracle,
-    proficiency: "Beginner",
-  },
-  {
-    name: "Firebase",
-    icon: firebase,
-    proficiency: "Intermediate",
-  },
+  { name: "MongoDB", icon: mongodb, proficiency: "Intermediate" },
+  { name: "MySQL", icon: mysql, proficiency: "Intermediate" },
+  { name: "Oracle DB", icon: oracle, proficiency: "Beginner" },
+  { name: "Firebase", icon: firebase, proficiency: "Intermediate" },
+  { name: "Firestore", icon: firestore, proficiency: "Intermediate" },
+  { name: "Spanner SQL", icon: spanner, proficiency: "Intermediate" },
 
-  // Cloud & DevOps
-  {
-    name: "AWS",
-    icon: aws,
-    proficiency: "Beginner",
-  },
-  {
-    name: "Azure DevOps",
-    icon: azuredevops,
-    proficiency: "Beginner",
-  },
+  // DevOps / Cloud
+  { name: "Azure DevOps", icon: azuredevops, proficiency: "Intermediate" },
+  { name: "CI/CD Pipelines", icon: cicd, proficiency: "Intermediate" },
+  { name: "AWS", icon: aws, proficiency: "Beginner" },
 
-  // Tools & Testing
-  {
-    name: "Git",
-    icon: git,
-    proficiency: "Intermediate",
-  },
-  {
-    name: "Postman",
-    icon: postman,
-    proficiency: "Intermediate",
-  },
+  // Tools
+  { name: "Git", icon: git, proficiency: "Intermediate" },
+  { name: "Postman", icon: postman, proficiency: "Intermediate" },
 
-  // Soft Skills & Agile
-  {
-    name: "Agile Methodologies",
-    icon: agile,
-    proficiency: "Intermediate",
-  },
-  {
-    name: "Problem-Solving",
-    icon: problemsolving,
-    proficiency: "Intermediate",
-  },
-  {
-    name: "Team Collaboration",
-    icon: teamwork,
-    proficiency: "Advanced",
-  },
+  // Programming Languages
+  { name: "Python", icon: python, proficiency: "Intermediate" },
+  { name: "Java", icon: java, proficiency: "Beginner" },
+  { name: "C++", icon: cplus, proficiency: "Beginner" },
 ];
-
 
 const education = [
   {
-    title: "Indian Certificate of Secondary Education",
-    company_name: "Sri Sai Public School",
-    icon: srisaiPublicSchool, // replace with appropriate icon variable
-    iconBg: "#383E56",
-    date: "June 2017 – March 2018",
-    points: [
-      "Percentage: 84.67%",
-      "Gained initial exposure to computer programming, learning the basics of Java.",
-      "Developed a keen interest in software development and emerging technologies.",
-      "Built early problem-solving abilities and a logical mindset through academic coursework.",
-    ],
-  },
-  {
-    title: "Intermediate in MPC Stream",
-    company_name: "Narayana Junior College",
-    icon: narayana, // replace with appropriate icon variable
-    iconBg: "#E6DEDD",
-    date: "June 2018 – March 2020",
-    points: [
-      "Percentage: 91.70%",
-      "Developed strong analytical and problem-solving skills through intensive coursework in Mathematics, Physics, and Chemistry.",
-      "Built a solid foundation in logical reasoning and numerical problem-solving, essential for engineering and software development.",
-      "Excelled in competitive exams, securing a high percentile in technical subjects.",
-    ],
-  },
-  {
-    title: "Bachelor of Technology in Information Technology",
+    title: "B.Tech in Information Technology",
     company_name: "Vignana Bharathi Institute of Technology",
-    icon: vbit, // replace with appropriate icon variable
+    icon: vbit,
     iconBg: "#383E56",
-    date: "Nov 2020 – April 2024",
+    date: "Nov 2020 – Apr 2024",
     points: [
       "CGPA: 8.34",
-      "Relevant Coursework: Data Structures & Algorithms, Machine Learning, Database Management System, Software Engineering.",
-      "Acquired strong technical foundations in software development, cloud computing, and web technologies.",
-      "Worked on various academic projects, applying theoretical knowledge to real-world applications.",
-      "Participated in coding competitions and hackathons, showcasing problem-solving skills and technical expertise.",
-      "Gained experience in full-stack development through coursework and hands-on projects."
+      "Relevant Coursework: DSA, DBMS, Operating Systems, Computer Networks, Software Engineering",
+      "Participated in hackathons and competitive programming contests",
     ],
   },
-
+  {
+    title: "Intermediate (MPC)",
+    company_name: "Narayana Junior College",
+    icon: narayana,
+    iconBg: "#E6DEDD",
+    date: "Jun 2018 – Mar 2020",
+    points: ["Percentage: 91.70%"],
+  },
+  {
+    title: "ICSE",
+    company_name: "Sri Sai Public School",
+    icon: srisaiPublicSchool,
+    iconBg: "#383E56",
+    date: "Jun 2017 – Mar 2018",
+    points: ["Percentage: 84.67%"],
+  },
 ];
 
 const experiences = [
   {
     title: "Software Engineer Intern",
     company_name: "KREAAS Technology Solutions Pvt. Ltd",
-    icon: kreaas, // replace with appropriate icon variable
+    icon: kreaas,
     iconBg: "#E6DEDD",
-    date: "March 2023 – June 2023",
+    date: "Mar 2023 – Jun 2023",
     points: [
-      "Led front-end development using React, translating design mockups into functional and visually appealing interfaces.",
-      "Achieved 100% task completion and enhanced interface responsiveness by 20% through performance optimizations.",
-      "Streamlined development workflows by integrating Azure DevOps for task management, version control, and CI/CD pipelines.",
-      "Mentored junior developers on React.js fundamentals, improving team efficiency and knowledge-sharing.",
-      "Collaborated with backend developers to integrate RESTful APIs, ensuring seamless data communication between frontend and backend.",
-      "Worked on bug fixes and performance improvements, maintaining high-quality code standards and optimizing application speed.",
-      "Gained hands-on experience with agile methodologies, actively participating in daily stand-ups, sprint planning, and retrospectives.",
+      "Built reusable React components and implemented key UI workflows for a web application developed from scratch.",
+      "Integrated REST APIs and validated responses using Postman to ensure smooth frontend-backend communication.",
+      "Worked in Agile sprints using Azure DevOps for task tracking and Git-based version control.",
+      "Mentored teammates by delegating tasks and guiding them on React hooks, component design, and debugging.",
     ],
   },
   {
     title: "Packaged Application Developer Associate",
     company_name: "Accenture",
-    icon: accenture, // replace with appropriate icon variable
+    icon: accenture,
     iconBg: "#E6DEDD",
     date: "Aug 2024 – Present",
     points: [
-      "Achieved MEAN Stack Certification, scoring 85% in assessments and 95% in hands-on evaluations.",
-      "Recognized as a Merit Holder, ranking among the top 5 in the cohort.",
-      "Currently working as a Frontend Developer on a Leaves & Payroll Management module, focusing on Angular development.",
-      "Collaborating with backend developers to enhance API efficiency and ensure seamless integration.",
-      "Implementing UI/UX improvements to optimize user interaction and improve performance.",
-      "Actively contributing to Agile development cycles, participating in daily stand-ups, sprint planning, and code reviews.",
+      "Ranked among the Top 5 performers in Accenture MEAN Stack training (Angular + Node.js), scoring 85% theory and 95% hands-on.",
+      "Developed and maintained Node.js REST APIs supporting enterprise workflows and internal business modules.",
+      "Implemented Workday integration workflows to fetch and sync real-time employee/resource data, improving data freshness.",
+      "Optimized Workday integration by replacing multi-endpoint fetch logic with a single targeted endpoint call, improving API response time.",
+      "Resolved production and stage issues by debugging backend services, optimizing Spanner SQL queries, and supporting Azure DevOps CI/CD deployments including dependency vulnerability remediation.",
     ],
   },
 ];
-
 
 const projects = [
   {
     name: "Decentralized Management Application",
     description:
-      "Team-developed project for college committee management, streamlining scheduling and reminders for faculty. Developed a robust notification system to ensure timely reminders for scheduled meetings. Seamlessly integrated frontend and backend and made the application mobile responsive.",
+      "Developed a committee management web application to streamline meeting scheduling, approvals, and faculty coordination. Implemented notification reminders to reduce missed meetings and integrated Firebase for authentication and data storage. Designed a fully responsive UI to ensure smooth usability across mobile and desktop devices.",
     tags: [
-      {
-        name: "reactjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "typescript",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "redux",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "mantineui",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "firebase",
-        color: "pink-text-gradient",
-      },
+      { name: "reactjs", color: "blue-text-gradient" },
+      { name: "typescript", color: "pink-text-gradient" },
+      { name: "redux", color: "orange-text-gradient" },
+      { name: "mantineui", color: "green-text-gradient" },
+      { name: "tailwindcss", color: "blue-text-gradient" },
+      { name: "firebase", color: "pink-text-gradient" },
     ],
     image: DCMA,
     source_code_link: "https://github.com/karthik-924/Decentralized-Governance",
     demo_link: "https://decentral-govern.web.app/",
   },
   {
-    name: "Merkenlaurel - Anime Merchandise E-commerce Application",
+    name: "Merkenlaurel - Anime Merchandise E-commerce",
     description:
-      "Dynamic ecommerce platform dedicated to anime enthusiasts, offering a wide range of merchandise. Empowered users to create personalized merchandise, particularly custom shirts, to express their unique anime preferences. Ongoing project with plans to add more features and engage the anime community.",
+      "Built a full-stack e-commerce platform for anime merchandise with authentication, product browsing, cart management, and checkout workflow. Implemented reusable UI components using Next.js and Redux for state management. Integrated Firebase for database operations and user authentication, ensuring scalability and smooth user experience.",
     tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "typescript",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "redux",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "mantineui",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "firebase",
-        color: "pink-text-gradient",
-      },
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "typescript", color: "pink-text-gradient" },
+      { name: "redux", color: "orange-text-gradient" },
+      { name: "mantineui", color: "green-text-gradient" },
+      { name: "tailwindcss", color: "blue-text-gradient" },
+      { name: "firebase", color: "pink-text-gradient" },
     ],
     image: merkenlaurel,
     source_code_link: "https://github.com/karthik-924/MerkenLaurel",
@@ -384,24 +218,12 @@ const projects = [
   {
     name: "Pixy - AI-Powered Chatbot",
     description:
-      "Leveraged React Native to create Pixy’s front-end interface, enabling cross-platform compatibility and native-like user experience on mobile devices. Integrated wake word detection using PicoVoice technology, enabling hands-free activation and query recording. Utilized Flask and Node.js servers as middleware to handle user queries, process background recording data, and interact with the OpenAI API for advanced natural language processing.",
+      "Developed a cross-platform AI chatbot application using React Native with voice-based interaction and wake-word activation through PicoVoice. Built Flask and Node.js backend services to handle user queries and request processing. Integrated OpenAI API to generate natural language responses and designed an efficient request/response flow for smoother interaction.",
     tags: [
-      {
-        name: "flask",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "reactnative",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "openaiapi",
-        color: "orange-text-gradient",
-      },
+      { name: "flask", color: "blue-text-gradient" },
+      { name: "nodejs", color: "green-text-gradient" },
+      { name: "reactnative", color: "pink-text-gradient" },
+      { name: "openaiapi", color: "orange-text-gradient" },
     ],
     image: pixy,
     source_code_link: "https://github.com/karthik-924/Pixy",
@@ -409,4 +231,4 @@ const projects = [
   },
 ];
 
-export { services, technologies,education, experiences, projects };
+export { services, technologies, education, experiences, projects };

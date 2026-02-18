@@ -20,9 +20,9 @@ const Points = (props: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const scores = {
-    "Beginner": 40,
-    "Intermediate": 60,
-    "Advanced": 80,
+    "Beginner": 25,
+    "Intermediate": 50,
+    "Advanced": 75,
     "Expert": 100
   }
   return (

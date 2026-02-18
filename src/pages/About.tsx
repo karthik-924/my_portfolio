@@ -70,11 +70,11 @@ const About: React.FC = () => {
                             variants={fadeIn("", "", 0.7, 1)}
                             className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
                         >
-                            I am a passionate and self-driven Full Stack Developer with expertise in TypeScript, JavaScript, and frameworks like React, Next.js, Node.js, and Express.js. With hands-on experience in building scalable and efficient web applications, I have honed my skills through internships, freelance projects, and hackathons, showcasing my ability to deliver user-friendly solutions.
+                            I’m a Full Stack Developer with strong backend experience in Node.js and Express, and frontend development using Angular, React, and Next.js. I’ve worked on building REST APIs, integrating enterprise systems, fixing production issues, and optimizing database queries to improve reliability and performance.
                             <br />
-                            Currently, I am actively enhancing my MEAN and MERN stack development skills, along with cloud technologies like AWS and Azure DevOps. My curiosity extends to competitive programming, machine learning, and 3D web development with Three.js, constantly pushing me to explore new dimensions of technology.
+                            Currently, I work at Accenture where most of my work involves backend development, production debugging, CI/CD support using Azure DevOps, and dependency upgrades for vulnerability remediation. I enjoy solving real-world engineering problems, improving system stability, and building scalable features that impact users directly.
                             <br />
-                            Beyond technical skills, I bring a problem-solving mindset, adaptability, and a collaborative spirit to every project. Whether it's developing high-performance web applications or tackling algorithmic challenges, I am eager to contribute to innovative and impactful solutions. Let's connect and build something amazing! 🚀
+                            Outside of work, I actively build personal projects and explore areas like competitive programming and cloud technologies. I’m always interested in opportunities where I can contribute to challenging systems and grow as a software engineer.
                         </motion.p>
 
                     </div>

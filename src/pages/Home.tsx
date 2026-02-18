@@ -31,8 +31,7 @@ const Home = () => {
             Hi, I'm <span className='text-[#915EFF]'>Karthik Emmadi</span>
           </p>
           <p className={`${styles.heroSubText} max-sm:mt-2 text-white-100`}>
-            I develop full-stack web applications and user interfaces, <br className='sm:block hidden' />
-            and create responsive and intuitive digital solutions.
+            I build full-stack web applications with Node.js, Angular, and React — focusing on scalable APIs, clean UI, and production-ready systems.
           </p>
         </div>
       </div>
